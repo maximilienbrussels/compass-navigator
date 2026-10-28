@@ -81,4 +81,4 @@
 - [ ] Issued credentials db/99 + emails — needs approval for database change
 
 ## Open
-- [ ] Account omzetten naar Workspace (pre-flight overzicht, dubbele bevestiging met e-mailcode, Stripe-overdracht, uitnodiging voor nieuw account, atomaire transactie, 30-dagen sunset + opruimen) — wacht op databaseverbinding (DATABASE_URL)
+- [x] Account omzetten naar Workspace (gebouwd; testen wacht op DATABASE_URL en migratie db/103)
