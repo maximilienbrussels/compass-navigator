@@ -79,3 +79,6 @@
 - [ ] Admin handles, curation, identity correction with audit log
 - [ ] Account preselect on login; subdomain fallback
 - [ ] Issued credentials db/99 + emails — needs approval for database change
+
+## Open
+- [ ] Account omzetten naar Workspace (pre-flight overzicht, dubbele bevestiging met e-mailcode, Stripe-overdracht, uitnodiging voor nieuw account, atomaire transactie, 30-dagen sunset + opruimen) — wacht op databaseverbinding (DATABASE_URL)
