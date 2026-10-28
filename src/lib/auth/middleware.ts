@@ -11,6 +11,9 @@ export const requireAuth = createMiddleware({ type: "function" }).server(async (
   const { currentUser } = await import("./session.server");
   const user = await currentUser();
   if (!user) throw new Error("Unauthorized");
+  // Converted accounts (now a Workspace) may only sign in to see the sunset notice.
+  const { sunsetStatus } = await import("@/lib/workspace-conversion.server");
+  if (await sunsetStatus(user.id)) throw new Error("account_sunset");
   const { createUserDb } = await import("@/lib/db/user-client.server");
   const db = createUserDb(user.id);
   const claims = {
