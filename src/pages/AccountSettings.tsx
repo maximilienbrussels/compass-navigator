@@ -25,6 +25,7 @@ import { IdentityVerification } from "@/components/settings/IdentityVerification
 import { IdentitiesPanel } from "@/components/settings/IdentitiesPanel";
 import { FreezeAccountPanel } from "@/components/settings/FreezeAccountPanel";
 import { MergeAccountWizard } from "@/components/settings/MergeAccountWizard";
+import { ConvertToWorkspaceWizard } from "@/components/settings/ConvertToWorkspaceWizard";
 import { BunqConnectionPanel } from "@/components/dashboard/BunqConnectionPanel";
 import { BillingHistoryPanel } from "@/components/dashboard/BillingHistoryPanel";
 import { DataExportCard } from "@/components/dashboard/DataExportCard";
@@ -568,6 +569,8 @@ export default function AccountSettings() {
           <FreezeAccountPanel />
 
           <MergeAccountWizard />
+
+          <ConvertToWorkspaceWizard />
 
           <section className="space-y-3 rounded-2xl border border-border bg-card p-4 sm:p-5">
             <h2 className="text-lg font-medium">Mijn gegevens</h2>

@@ -2,6 +2,7 @@ import { createFileRoute, Outlet, useNavigate, useRouterState } from "@tanstack/
 import { useEffect } from "react";
 import { useAuth } from "@/hooks/useAuth";
 import { BrandLoader } from "@/components/BrandLoader";
+import { SunsetOverlay } from "@/components/SunsetOverlay";
 
 export const Route = createFileRoute("/_authenticated")({
   component: AuthenticatedLayout,
@@ -36,5 +37,10 @@ function AuthenticatedLayout() {
 
   if (!user) return null;
 
-  return <Outlet />;
+  return (
+    <>
+      <Outlet />
+      <SunsetOverlay />
+    </>
+  );
 }
